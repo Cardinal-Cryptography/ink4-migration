@@ -20,7 +20,6 @@
 
 ## Storage
 
-- added `take(key) -> Option<V>` that allows for removing elements from the storage while returning the value. Replaces `get` + `remove` pattern.
 - Remove `SpreadAllocate`, `SpreadLayout` and `PackedLayout` implementations (and derivations).
 - Derive `StorageLayout` in`std` feature for types that you want to store in `Mapping`s (see `Bulletin` struct in the Bulletin Board migration). It’s used when generating contract’s metadata.
 
