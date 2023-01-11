@@ -4,7 +4,7 @@
 
 For compiling, building and deploying contracts to the network you will need `cargo contract` installed. Each network may be compatible with a different release of it. 
 
-When ink! 4.0 lands on Aleph Zero Testnet, you will need `cargo contract` version `2.0.0-beta.1`:
+To interact with current version of Aleph Zero Testnet, you will need `cargo contract` version `2.0.0-beta.1`:
 ```
 cargo install cargo-contract --version 2.0.0-beta.1
 ```
