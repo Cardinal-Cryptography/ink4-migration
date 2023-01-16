@@ -10,7 +10,7 @@
 
 ## Imports
 
-- Replace all usages of individual crates with reexports, e.g. `ink_env` ➜ `ink::env`
+- Replace all usages of individual crates with reexports, e.g. `ink_env` ➜ `ink::env` (however, `ink_lang` becomes just `ink`).
 - Remove the commonly used `use ink_lang as ink` idiom.
 
 ## Contract constructor
