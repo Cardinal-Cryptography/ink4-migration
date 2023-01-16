@@ -10,3 +10,7 @@ cargo install cargo-contract --version 2.0.0-beta.1
 ```
 
 Latest releases of `cargo contract` are [adding support](https://github.com/paritytech/cargo-contract/pull/870) for new arguments in `Contracts::upload_code` which has not been yet integrated into Aleph Zero chain.
+
+## `substrate-contracts-node`
+
+Similarly, if you're using substrate-contracts-node, you need to be using version [`0.22.1`]( https://github.com/paritytech/substrate-contracts-node/releases/tag/v0.22.1).
