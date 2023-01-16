@@ -4,7 +4,8 @@ This repository aims to fill in the gaps in documentation and guides for develop
 We will start with separate files for:
 * plain ink4 contracts - [contracts.md](./contracts.md)
 * OpenBrush contracts - [openbrush.md](./openbrush.md)
-* frontend - [frontend.md](./frontend.md)
+* frontend (usage of polkadot-js/api or similar) - [frontend.md](./frontend.md)
+* tooling (`cargo contract`, etc.) - [tools.md](./tools.md)
 
 # How to suggest changes to the content
 
