@@ -14,3 +14,7 @@ Latest releases of `cargo contract` are [adding support](https://github.com/pari
 ## `substrate-contracts-node`
 
 Similarly, if you're using substrate-contracts-node, you need to be using version [`0.22.1`]( https://github.com/paritytech/substrate-contracts-node/releases/tag/v0.22.1).
+
+## Building with Docker
+
+We've prepared a Docker image with required tooling to build contracts compatible with current Aleph Zero Testnet (contracts pallet at version `0.9.32`). If you prefer to use it, take a look at https://github.com/Cardinal-Cryptography/docker-ink-dev.
