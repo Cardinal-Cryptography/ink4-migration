@@ -5,6 +5,48 @@
 * Bump `@polkadot` dependencies to latest.
 * Add `"@polkadot/util": "^10.2.3"` - required for `WeightV2`.
 
+## Gas limit estimation
+
+The following snippet is shortened and simplified call for gas estimation:
+```typescript
+export const getGasLimit = async (
+  api: ApiPromise,
+  userAddress: string,
+  message: string,
+  contract: ContractPromise,
+  options = {} as ContractOptions,
+  args = [] as unknown[]
+): Promise<WeightV2 | string> => {
+  const abiMessage = contract.abi.messages.find((m) => m.method === message);
+  if (!abiMessage) { 
+    // Error case. Needs proper handling
+    return `"${message}" not found in Contract`;
+  }
+
+  const { value, gasLimit, storageDepositLimit } = options;
+
+  const result = await api.call.contractsApi.call<ContractInstantiateResult>(
+    userAddress,
+    contract.address,
+    value ?? new BN(0),
+    gasLimit ?? null,
+    storageDepositLimit ?? null,
+    abiMessage.value.toU8a(args)
+  );
+
+  return result.gasRequired;
+};
+```
+
+And on the call-side:
+```typescript
+const gasLimit = await getGasLimit(api, loggedUserAddress, contract_method, contract, options, args);
+// Now, we can use the estimated `gasLimit` in actual call below.
+await contract.tx.contract_method( { gasLimit });
+```
+
+> Please not that the example usage above is not working and is used only for presenting the case. Should not be copied.
+
 ## Weight V2
 
 Ink4 introduces big changes to weights. This has an effect on the frontend integrations where one has to specify gas limits of contract calls.
