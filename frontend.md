@@ -47,7 +47,7 @@ await contract.tx.contract_method( { gasLimit });
 
 > Please not that the example usage above is not working and is used only for presenting the case and should not be copied.
 >
-> Code above has been updated from the [`paritytech/ink-workshop`](https://github.com/paritytech/ink-workshop/commit/7fb7bde6af9565eb55ca9d518f316c02c46d216e) repository.
+> Code above has been updated from the [`paritytech/ink-workshop`]([https://github.com/paritytech/ink-workshop/commit/7fb7bde6af9565eb55ca9d518f316c02c46d216e](https://github.com/paritytech/ink-workshop/tree/7fb7bde6af9565eb55ca9d518f316c02c46d216e/frontend/lib/useInk/utils/contracts)) repository.
 
 ## Weight V2
 
