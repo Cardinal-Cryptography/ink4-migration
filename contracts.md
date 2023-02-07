@@ -3,7 +3,7 @@
 ## `Cargo.toml`
 
 - All `ink_XYZ` dependencies have been merged into `ink`. You can use:
-    - `ink = { git = https://github.com/paritytech/ink", rev = "03474e59c4c8245df525ee2a9fabcba55e21ed8f", default-features = false }`
+    - `ink = { git = "https://github.com/paritytech/ink", rev = "03474e59c4c8245df525ee2a9fabcba55e21ed8f", default-features = false }`
     - Or use a commit compatible with the OpenBrush release `ink = { git = "https://github.com/paritytech/ink", rev = "4655a8b4413cb50cbc38d1b7c173ad426ab06cde", default-features = false }`
 - Under `[features.std]` remove all `"ink_XYZ/std`" entries and replace with single `"ink/std"`.
 - Bump version of `scale-info` to `2.3`
